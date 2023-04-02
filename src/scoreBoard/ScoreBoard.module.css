@@ -1,0 +1,22 @@
+.scoreBoard {
+  width: 95%;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 2.5%;
+  font-weight: bolder;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.3rem;
+}
+.scoreBoard > * {
+  padding: 0.2rem;
+  background-color: #df5242;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+.scoreBoard .target {
+  flex-grow: 2;
+  background-color: #90231d;
+}
