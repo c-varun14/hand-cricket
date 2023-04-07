@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hand-cricket/static/css/main.04fbe857.css",
-    "main.js": "/hand-cricket/static/js/main.21b6ab64.js",
+    "main.css": "/hand-cricket/static/css/main.d03d984e.css",
+    "main.js": "/hand-cricket/static/js/main.428f35e5.js",
     "static/media/6.png": "/hand-cricket/static/media/6.6cb74d126203a1e87c75.png",
     "static/media/5.png": "/hand-cricket/static/media/5.fbced13b1de6ffc94d40.png",
     "static/media/3.png": "/hand-cricket/static/media/3.a9bebaf56ea858e85044.png",
@@ -11,11 +11,11 @@
     "static/media/tails.svg": "/hand-cricket/static/media/tails.f07525466f838a73719ed5d1f30b6db1.svg",
     "static/media/heads.svg": "/hand-cricket/static/media/heads.81dce2ccded35ffc76ac790a547b4725.svg",
     "index.html": "/hand-cricket/index.html",
-    "main.04fbe857.css.map": "/hand-cricket/static/css/main.04fbe857.css.map",
-    "main.21b6ab64.js.map": "/hand-cricket/static/js/main.21b6ab64.js.map"
+    "main.d03d984e.css.map": "/hand-cricket/static/css/main.d03d984e.css.map",
+    "main.428f35e5.js.map": "/hand-cricket/static/js/main.428f35e5.js.map"
   },
   "entrypoints": [
-    "static/css/main.04fbe857.css",
-    "static/js/main.21b6ab64.js"
+    "static/css/main.d03d984e.css",
+    "static/js/main.428f35e5.js"
   ]
 }
