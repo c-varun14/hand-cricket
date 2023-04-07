@@ -1,13 +1,33 @@
-import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
-import ScoreBoard from "./scoreBoard/ScoreBoard";
 import Toss from "./toss/Toss";
+import BatOrBowl from "./BatOrBowl/BatOrBowl";
+import GameLogic from "./GameLogic/GameLogic";
+import ComputerToss from "./ComputerToss/ComputerToss";
 
 function App() {
+  const [tossWin, setTossWin] = useState(null);
+  const [batter, setBatter] = useState("");
+
   return (
     <>
-      {/* <ScoreBoard /> */}
-      <Toss />
+      {tossWin === null && batter === "" && <Toss setToss={setTossWin}></Toss>}
+      {tossWin === true && batter === "" && (
+        <BatOrBowl setBatter={setBatter}></BatOrBowl>
+      )}
+      {tossWin === false && batter === "" && (
+        <ComputerToss
+          setBatter={setBatter}
+          setTossWin={setTossWin}
+        ></ComputerToss>
+      )}
+      {batter !== "" && (
+        <GameLogic
+          batter={batter}
+          setBatter={setBatter}
+          setTossWin={setTossWin}
+        />
+      )}
     </>
   );
 }

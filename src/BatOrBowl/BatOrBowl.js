@@ -1,12 +1,12 @@
 import styles from "./BatOrBowl.module.css";
 
-export default function BatOrBowl({ setUserChoice }) {
+export default function BatOrBowl({ setBatter }) {
   const batOrBowlHandler = (e) => {
-    setUserChoice(e.target.innerText);
-    console.log(e.target.innerText);
+    if (e.target.innerText === "Bat") setBatter("user");
+    else setBatter("computer");
   };
   return (
-    <>
+    <div>
       <h2 className={styles.greeting}>Congrats, You Won The Toss</h2>
       <h3 className={styles.batOrBowlText}>You want to Bat or Bowl</h3>
       <div className="flex">
@@ -25,6 +25,6 @@ export default function BatOrBowl({ setUserChoice }) {
           Bowl
         </button>
       </div>
-    </>
+    </div>
   );
 }

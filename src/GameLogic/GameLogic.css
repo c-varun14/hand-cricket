@@ -1,12 +1,46 @@
+#game-logic {
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+#choices,
+#result,
+#controls-1,
+#controls-2 {
+  border-radius: 8px;
+  width: 95%;
+}
+#controls {
+  width: 100%;
+}
 #result {
-  background-color: #fff;
-  color: #070606;
+  flex-direction: column;
+  background-color: #c5545c;
+  color: #fff;
+  min-height: 15vh;
 }
 #choices {
+  background-color: #8a5e84;
+  padding: 0.2rem;
+  justify-content: space-around;
 }
-#choices > p {
+#choices > div {
+  color: #fff;
+  flex-direction: column;
+}
+#controls-1,
+#controls-2 {
+  justify-content: space-around;
+  padding: 0.5rem;
 }
 #controls-1 {
+  background-color: #5664a2;
+  margin-bottom: 1rem;
 }
 #controls-2 {
+  background-color: #1a6bb8;
+}
+.control-btn {
+  height: 6rem;
+  width: 6rem;
 }

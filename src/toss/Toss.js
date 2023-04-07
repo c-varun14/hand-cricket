@@ -3,9 +3,13 @@ import heads from "./heads.svg";
 import tails from "./tails.svg";
 import styles from "./Toss.module.css";
 
-const tossLogic = (youChoice, tossResult) => {};
-
-export default function Toss() {
+export default function Toss({ setToss }) {
+  const tossLogic = (youChoice, computerChoice) => {
+    setTimeout(() => {
+      if (youChoice == computerChoice) setToss(true);
+      else setToss(false);
+    }, 3000);
+  };
   const coinRef = useRef(null);
   const headRef = useRef(null);
   const tailRef = useRef(null);
@@ -17,15 +21,15 @@ export default function Toss() {
     headRef.current.style.cursor = "not-allowed";
     if (Math.random() < 0.5) {
       coinRef.current.className = styles.heads;
-      tossLogic(event.target.innerText, "head");
+      tossLogic(event.target.innerText, "Tail");
     } else {
       coinRef.current.className = styles.tails;
-      tossLogic(event.target.innerText, "tail");
+      tossLogic(event.target.innerText, "Head");
     }
   };
 
   return (
-    <section id={styles.toss}>
+    <section id={styles.toss} className="flex">
       <div id={styles.coin} ref={coinRef}>
         <img src={heads} className={styles.sideA} />
         <img src={tails} className={styles.sideB} />
@@ -33,7 +37,7 @@ export default function Toss() {
       <h1>Toss</h1>
       <div className={styles.headOrTail}>
         <button
-          style={{ "background-color": "#1B6AB8" }}
+          style={{ backgroundColor: "#CD2126" }}
           className={`btn ${styles.btn}`}
           ref={headRef}
           onClick={onClick}
@@ -41,7 +45,7 @@ export default function Toss() {
           Head
         </button>
         <button
-          style={{ "background-color": "#5764A3" }}
+          style={{ backgroundColor: "#2897FE" }}
           className={`btn ${styles.btn}`}
           ref={tailRef}
           onClick={onClick}
